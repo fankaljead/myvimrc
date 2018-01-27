@@ -42,3 +42,13 @@ execute pathogen#infect()
 
 "配置主题颜色
 colorscheme desert
+
+"创建快速遍历Vim列表的按键映射项
+"在列表中反向移动
+nnoremap <silent> [b :bprevious<CR>
+"在列表中正向移动
+nnoremap <silent> ]b :bnext<CR>
+"跳到列表的开头
+nnoremap <silent> [B :bfirst<CR>
+"跳到列表的结尾
+nnoremap <silent> ]B :blast<CR>

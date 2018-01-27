@@ -1,0 +1,44 @@
+"配置vim
+
+"配置外观
+
+"设置行号
+set nu 
+
+"设置tab键4格
+"set bs=4
+
+"设置自动缩进4格
+set shiftwidth=4
+
+"设置忽略大小写
+set ignorecase
+
+"设置符号补全
+inoremap ( ()
+inoremap [ []
+inoremap { {}
+inoremap < <>
+inoremap 《 《》
+inoremap ” “”
+inoremap ’ ‘’
+inoremap " ""
+inoremap ' ''
+
+"忽略方向键
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+"匹配关键字跳转
+"自动加载 matchit 插件
+set nocompatible
+filetype plugin on
+runtime macros/matchit.vim
+
+"pathogen.vim manage path 管理插件
+execute pathogen#infect()
+
+"配置主题颜色
+colorscheme desert

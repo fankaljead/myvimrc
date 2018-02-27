@@ -1,4 +1,5 @@
-﻿" 打开文件时光标自动到上次退出该文件时的光标所在位置
+﻿source /root/myvimrc/_vundle
+" 打开文件时光标自动到上次退出该文件时的光标所在位置
 autocmd BufReadPost * if line("'\"") && line("'\"") <= line("$") | exe "normal`\"" | endif
 
 "设置透明度
@@ -21,7 +22,13 @@ autocmd BufReadPost * if line("'\"") && line("'\"") <= line("$") | exe "normal`\
 nnoremap <leader>w :w<cr>"使用\w保存
 nnoremap <leader>i :GoImports<cr>
 nnoremap <leader>q :wq<cr>
+nnoremap <c-g> :w<cr>:!go run %:t<cr>
 
+"insert mode directions
+inoremap <c-h> <Left>
+inoremap <c-j> <Down>
+inoremap <c-k> <Up>
+inoremap <c-l> <Right>
 
 set nu
 "set encoding=utf-8
@@ -34,7 +41,8 @@ set shiftwidth=4       " shiftwidth写代码时用到,缩进为4字符
 set cindent
 set nobackup           " 让VIM不生成备份文件(~文件)
 
-autocmd GUIEnter * simalt ~x" 默认最大化启动
+"GVim
+"autocmd GUIEnter * simalt ~x" 默认最大化启动
 
 
 
@@ -43,7 +51,7 @@ autocmd GUIEnter * simalt ~x" 默认最大化启动
 set foldmethod=syntax "用语法高亮来定义折叠
 set foldlevel=100   "启动vim时不要自动折叠代码
 "set foldcolumn=5    "设置折叠栏的宽度
-colorscheme gruvbox	"设置主题
+"colorscheme gruvbox	"设置主题
 
 set guioptions-=T              " 去除工具栏
 set guioptions-=m              " 去除顶部的菜单栏

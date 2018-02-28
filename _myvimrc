@@ -337,7 +337,7 @@ autocmd BufReadPost *
 
 let g:neocomplete#enable_at_startup = 1
 
-"git
+"git for vim 快捷键及启动选项
 "turn line highlighting on
  nmap <Leader>ge :GitGutterLineHighlightsEnable<cr>
  nmap <Leader>gd :GitGutterLineHighlightsDisable<cr>

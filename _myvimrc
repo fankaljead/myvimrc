@@ -337,3 +337,11 @@ autocmd BufReadPost *
 
 let g:neocomplete#enable_at_startup = 1
 
+"git
+"turn line highlighting on
+ nmap <Leader>ge :GitGutterLineHighlightsEnable<cr>
+ nmap <Leader>gd :GitGutterLineHighlightsDisable<cr>
+ nmap <Leader>gt :GitGutterLineHighlightsToggle<cr>
+
+ nmap <Leader>gv :GitGutterPreviewHunk<cr>
+ let g:gitgutter_highlight_lines = 1
